@@ -142,7 +142,7 @@
               <li>Webpack</li>
               <li>React <small>By facebook</small></li>
               <li>Redux <small>By facebook</small></li>
-              <li>Jest? <small>By facebook</small></li>
+              <li>Flow <small>By facebook</small></li>
               <li>AVA</li>
             </ul>
           </section>
@@ -156,6 +156,12 @@
             <h3>Mobile First</h3>
             <p>Develop for the phone first, using Chrome/Firefox's mobile debugger</p>
             <p>Alternative to edit lessons: Tapping vs Drag n Drop</p>
+          </section>
+          <section>
+            <h1>Courage</h1>
+            <p class="fragment">Drag n Drop too unintuitive</p>
+            <p class="fragment">Clicking is easier, faster and less technically challenging</p>
+            <h3 class="fragment">Good bye DnD</h3>
           </section>
           <section>
             <h3>Theme Colors</h3>
@@ -176,9 +182,14 @@
           </section>
           <section>
             <h3>Search Implementation</h3>
-            <p>Smarter search and comparison</p>
-            <p>Currently: All substrings are included, module codes' ranking come after descriptions</p>
-            <p>V3: Smarter rankings, less typing!</p>
+            <div class="fragment" style="color: burlywood;">
+              <h5>Current</h5>
+              <p>All substrings are included, module codes' ranking come after descriptions</p>
+            </div>
+            <div class="fragment" style="color: aquamarine;">
+              <h5>V3</h5>
+              <p>Smarter rankings, less typing!</p>
+            </div>
           </section>
           <section>
             <h3>Flexible start/end timings</h3>
@@ -188,8 +199,20 @@
           </section>
           <section>
             <h4>Analysis!</h4>
-            <p>~90% of lessons lie between 10am and 7pm</p>
-            <p>Correlation with how the packed the bus is? -insert funny picture-</p>
+            <p class="fragment">Plot out all lessons' start and end time for this semester</p>
+            <p class="fragment">~90% of lessons lie between 10am and 7pm</p>
+          </section>
+          <section>
+            <h4>Graphs</h4>
+            <img src="./img/end-time-lessons.png">
+          </section>
+          <section>
+            <h4>More Graphs!</h4>
+            <img src="./img/start-time-lessons.png">
+          </section>
+          <section>
+            <img src="./img/nus-bus.jpg">
+            <p>Perhaps this is why the buses are so packed?</p>
           </section>
         </section>
 
@@ -199,13 +222,37 @@
             <p>A tale of tables, boxes and blocks</p>
           </section>
           <section>
+            <h3>A simple timetable</h3>
+            <img src="./img/stack-of-books.jpg">
+          </section>
+          <section>
+            <h3>First Attempt</h3>
+            <h4>Tables</h4>
+            <p>Too difficult to work with. Tables are not responsive.</p>
+          </section>
+          <section>
+            <h3>Second Attempt</h3>
+            <h4>Flexbox</h4>
+            <p><i>Flexible</i>, but difficult to master.</p>
+            <p>Also, many cross browser bugs. <small class="fragment" style="transform: rotate(30deg) translateY(1.5em);">Curse you safari !</small></p>
+          </section>
+          <section>
+            <h3>Third Attempt</h3>
+            <h4>Inline-block</h4>
+            <p></p>
+          </section>
+          <section>
+            <p>You see where this is going</p>
+          </section>
+
+          <section>
             <h3>Horizontal / Vertical Mode</h3>
             <div style="text-align: left;">
               <p>Problem arised when: </p>
-              <p>NTU people complained about horizontal mode.</p>
-              <p>NUS people complained about vertical mode.</p>
+              <p style="color: tomato;" class="fragment">NTU people complained about horizontal mode.</p>
+              <p style="color: dodgerblue;" class="fragment">NUS people complained about vertical mode.</p>
             </div>
-            <p style="float: right;">Solution: Toggle-able orientations</p>
+            <p class="fragment" style="float: right;">Solution: Toggle-able orientations</p>
           </section>
         </section>
 
