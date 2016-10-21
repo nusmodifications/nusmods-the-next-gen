@@ -77,29 +77,26 @@
 				</section>
 
         <section>
-          <section>
-            <h2>Motivation</h2>
-            <p>
-              <div class="fragment">NUSMods doesn't work that well on phones.</div>
-              <div class="fragment">NTU has to use their proprietary planner.<img style="max-height: 70vh" src="./img/ntu_stars_planner.jpg"></div>
-            </p>
-          </section>
-          <section>
-            <h2>It's time for</h2>
-            <h3>A little <a href="https://www.modify.sg/">demo</a></h3>
-          </section>
+          <h2>Motivation</h2>
+          <p>
+            <div class="fragment">NUSMods doesn't work that well on phones.</div>
+            <div class="fragment">NTU has to use their proprietary planner.<img style="max-height: 70vh" src="./img/ntu_stars_planner.jpg"></div>
+          </p>
+        </section>
+        <section>
+          <h2>It's time for</h2>
+          <h3>A little <a href="https://www.modify.sg/">demo</a></h3>
         </section>
 
-				<section>
-          <section>
-            <p>Modify was built with <a href="https://vuejs.org/">VueJS</a></p>
-            <img style="background: none; border: 0" src="./img/vue-logo.png">
-          </section>
-          <section>
-            <h2>Why Vue?</h2>
-            <p>
-              <strong>Easy to learn</strong>
-              <pre><code data-trim>
+        <section>
+          <p>Modify was built with <a href="https://vuejs.org/">VueJS</a></p>
+          <img style="background: none; border: 0" src="./img/vue-logo.png">
+        </section>
+        <section>
+          <h2>Why Vue?</h2>
+          <p>
+            <strong>Easy to learn</strong>
+            <pre><code data-trim>
 <div id="app-4">
   <ol>
     <li v-for="todo in todos">
@@ -107,56 +104,58 @@
     </li>
   </ol>
 </div>
-              </code></pre>
-            </p>
-          </section>
-          <section>
-            <p>It is fast.</p>
-            <img src="./img/vue-performance.png">
-          </section>
-          <section>
-            <p>It's getting increasingly popular</p>
-            <figure>
-              <blockquote cite="http://stateofjs.com/2016/frontend/">
-              &ldquo;But if you look at percentages, it turns out the uncontested leader is instead React. What's more surprising is Vue's performance, coming second by both measures [Interest and Satisfaction].&rdquo;
-              </blockquote>
-              <figcaption style="float:right; margin-right:2em;">- StateOfJS</figcaption>
-            </figure>
-          </section>
-				</section>
-
-                <section>
-          <section>
-            <h3>Just for Fun: Parsing NTU</h3>
-            <p>Crawling with Scrapy
-              <small style="transform: rotate(15deg) translateY(1em); font-size: 0.5em;">
-                I thought this was a Javascript talk?
-              </small>
-            </p>
-          </section>
-          <section>
-            <p>
-              NTU load their data in an iframe.
-            </p>
-            < imgclass="stretch" src="./img/ntu_info.png">
-          </section>
-          <section>
-            <h4>Steps:</h4>
-            <ol>
-              <li>Get the iframe url</li>
-              <li class="fragment">
-                <div>Url has a subject code search parameter </div>
-                <div style="color: yellow">"...&r_subj_code=<span style="color: aqua">CS</span>&boption=Search"</div>
-              </li>
-              <li class="fragment">
-                <div>How do we get all modules?</div>
-                <div class="fragment">Pass in nothing! <div style="color: lime">"...&r_subj_code=&boption=Search"</div></div>
-              </li>
-            </ol>
-          </section>
-          <section>
-            <h3>Modern HTML layout</h3>
-            <pre><code data-trim>
+            </code></pre>
+          </p>
+        </section>
+        <section>
+          <p>Don't just take my word</p>
+          <img style="background: none; border: 0" src="./img/gitlab-vue.png">
+          <p><a href="https://about.gitlab.com/2016/10/20/why-we-chose-vue/">Gitlab says it's easy too</a></p>
+        </section>
+        <section>
+          <p>It is fast.</p>
+          <img src="./img/vue-performance.png">
+        </section>
+        <section>
+          <p>It's getting increasingly popular</p>
+          <figure>
+            <blockquote cite="http://stateofjs.com/2016/frontend/">
+            &ldquo;But if you look at percentages, it turns out the uncontested leader is instead React. What's more surprising is Vue's performance, coming second by both measures [Interest and Satisfaction].&rdquo;
+            </blockquote>
+            <figcaption style="float:right; margin-right:2em;">- StateOfJS</figcaption>
+          </figure>
+        </section>
+        <section>
+          <h3>Just for Fun: Parsing NTU</h3>
+          <p>Crawling with Scrapy
+            <small style="transform: rotate(15deg) translateY(1em); font-size: 0.5em;">
+              I thought this was a Javascript talk?
+            </small>
+          </p>
+        </section>
+        <section>
+          <p>
+            NTU load their data in an iframe.
+          </p>
+          < imgclass="stretch" src="./img/ntu_info.png">
+        </section>
+        <section>
+          <h4>Steps:</h4>
+          <ol>
+            <li>Get the iframe url</li>
+            <li class="fragment">
+              <div>Url has a subject code search parameter </div>
+              <div style="color: yellow">"...&r_subj_code=<span style="color: aqua">CS</span>&boption=Search"</div>
+            </li>
+            <li class="fragment">
+              <div>How do we get all modules?</div>
+              <div class="fragment">Pass in nothing! <div style="color: lime">"...&r_subj_code=&boption=Search"</div></div>
+            </li>
+          </ol>
+        </section>
+        <section>
+          <h3>Modern HTML layout</h3>
+          <pre><code data-trim>
 <li class="nav-dropdown-container">
   <a class="nav-link">Community</a>
   <span class="arrow"></span>
@@ -166,12 +165,12 @@
     </li>
   </ul>
 </li>
-            </code></pre>
-            <p>Easy to parse via selectors</p>
-          </section>
-          <section>
-            <h3>Layout using tables</h3>
-            <pre><code data-trim>
+          </code></pre>
+          <p>Easy to parse via selectors</p>
+        </section>
+        <section>
+          <h3>Layout using tables</h3>
+          <pre><code data-trim>
 <TABLE>
 <TR>
   <TD WIDTH="100"><B><FONT SIZE=2 COLOR=#0000FF>AC2103</FONT></B></TD>
@@ -188,14 +187,13 @@
   <TD COLSPAN="2"><B><FONT SIZE=2 COLOR=BROWN>AA205, AC3104</FONT></B></TD>
 </TR>
 </TABLE>
-            </code></pre>
-            <p>No well defined layers</p>
-          </section>
-          <section>
-            <h3>Solution?</h3>
-              <p class="fragment">Select using <span style="color:orange">color</span> tags</p>
-              <p class="fragment">Select using <span>&</span>nbsp that was in between each module somehow</p>
-          </section>
+          </code></pre>
+          <p>No well defined layers</p>
+        </section>
+        <section>
+          <h3>Solution?</h3>
+            <p class="fragment">Select using <span style="color:orange">color</span> tags</p>
+            <p class="fragment">Select using <span>&</span>nbsp that was in between each module somehow</p>
         </section>
 
         <section>
