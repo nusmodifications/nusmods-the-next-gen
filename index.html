@@ -404,77 +404,77 @@ function timetable(state, action) {
       newState.modules.push(action.payload.moduleCode);
       newState.lessons.push(action.payload.lessons);
       return newState;
+    default:
+      return state;
   }
 }
           </code></pre>
         </section>
 
         <section>
-          <section>
-            <h2>Design Considerations</h2>
-          </section>
-          <section>
-            <h3>Mobile First</h3>
-            <p>Develop for the phone first, using Chrome/Firefox's mobile debugger</p>
-            <p>Alternative to edit lessons: Tapping vs Drag n Drop</p>
-          </section>
-          <section>
-            <h1>Courage</h1>
-            <p class="fragment">Drag n Drop too unintuitive</p>
-            <p class="fragment">Clicking is easier, faster and less technically challenging</p>
-            <h3 class="fragment">Good bye DnD</h3>
-          </section>
-          <section>
-            <h3>Theme Colors</h3>
-            <div style="float: left; background: #555; padding: 0.5em;">
-              <h4>Modify.sg</h4>
-              <ul>
-                <li>Picked from Material Design palette</li>
-                <li>Accessibility testing</li>
-              </ul>
-            </div>
-            <div style="float: right; background: #333; padding: 0.5em;">
-              <h4>V3</h4>
-              <ul>
-                <li>Killing of unpopular colors</li>
-                <li>The feature everyone wanted: Color pickers</li>
-              </ul>
-            </div>
-          </section>
-          <section>
-            <h3>Search Implementation</h3>
-            <div class="fragment" style="color: burlywood;">
-              <h5>Current</h5>
-              <p>All substrings are included, module codes' ranking come after descriptions</p>
-            </div>
-            <div class="fragment" style="color: aquamarine;">
-              <h5>V3</h5>
-              <p>Smarter rankings, less typing!</p>
-            </div>
-          </section>
-          <section>
-            <h3>Flexible start/end timings</h3>
-            <p class="fragment">We realised lessons that start at 6am exists</p>
-            <p class="fragment">So did lessons that ended at midnight</p>
-            <p class="fragment">So which hours do we present?</p>
-          </section>
-          <section>
-            <h4>Analysis!</h4>
-            <p class="fragment">Plot out all lessons' start and end time for this semester</p>
-            <p class="fragment">~90% of lessons lie between 10am and 7pm</p>
-          </section>
-          <section>
-            <h4>Graphs</h4>
-            <img src="./img/end-time-lessons.png">
-          </section>
-          <section>
-            <h4>More Graphs!</h4>
-            <img src="./img/start-time-lessons.png">
-          </section>
-          <section>
-            <img src="./img/nus-bus.jpg">
-            <p>Perhaps this is why the buses are so packed?</p>
-          </section>
+          <h2>Key Considerations Revisited</h2>
+        </section>
+        <section>
+          <h3>Mobile First</h3>
+          <p>Develop for the phone first, using Chrome/Firefox's mobile debugger</p>
+          <p>Alternative to edit lessons: Tapping vs Drag n Drop</p>
+        </section>
+        <section>
+          <h1>Courage</h1>
+          <p class="fragment">Drag n Drop too unintuitive</p>
+          <p class="fragment">Clicking is easier, faster and less technically challenging</p>
+          <h3 class="fragment">Good bye DnD</h3>
+        </section>
+        <section>
+          <h3>Theme Colors</h3>
+          <div style="float: left; background: #555; padding: 0.5em;">
+            <h4>Modify.sg</h4>
+            <ul>
+              <li>Picked from Material Design palette</li>
+              <li>Accessibility testing</li>
+            </ul>
+          </div>
+          <div style="float: right; background: #333; padding: 0.5em;">
+            <h4>V3</h4>
+            <ul>
+              <li>Killing of unpopular colors</li>
+              <li>The feature everyone wanted: Color pickers</li>
+            </ul>
+          </div>
+        </section>
+        <section>
+          <h3>Search Implementation</h3>
+          <div class="fragment" style="color: burlywood;">
+            <h5>Current</h5>
+            <p>All substrings are included, module codes' ranking come after descriptions</p>
+          </div>
+          <div class="fragment" style="color: aquamarine;">
+            <h5>V3</h5>
+            <p>Smarter rankings, less typing!</p>
+          </div>
+        </section>
+        <section>
+          <h3>Flexible start/end timings</h3>
+          <p class="fragment">We realised lessons that start at 6am exists</p>
+          <p class="fragment">So did lessons that ended at midnight</p>
+          <p class="fragment">So which hours do we present?</p>
+        </section>
+        <section>
+          <h4>Analysis!</h4>
+          <p class="fragment">Plot out all lessons' start and end time for this semester</p>
+          <p class="fragment">~90% of lessons lie between 10am and 7pm</p>
+        </section>
+        <section>
+          <h4>Graphs</h4>
+          <img src="./img/end-time-lessons.png">
+        </section>
+        <section>
+          <h4>More Graphs!</h4>
+          <img src="./img/start-time-lessons.png">
+        </section>
+        <section>
+          <img src="./img/nus-bus.jpg">
+          <p>Perhaps this is why the buses are so packed?</p>
         </section>
 
         <section>
@@ -519,12 +519,21 @@ function timetable(state, action) {
 
         <section>
           <h2>NUSModerator.js Library</h2>
+          <p><a href="https://github.com/nusmodifications/nusmoderator">https://github.com/nusmodifications/nusmoderator</a></p>
           <p><em>Utlity toolbelt for nus applications</em></p>
           <ul>
             <li>Academic week calculation</li>
             <li>TBD: Timetable generation algorithm and various utility functions. You can build your own timetabling client</li>
             <li>TBD: Matric number letter calculation</li>
             <li>TBD: Wrapper for NUSMods API</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>The Future</h2>
+          <ul>
+            <li>Dominate timetabling for Singapore universities</li>
+            <li>React Native app making use of NUSModerator.js library</li>
           </ul>
         </section>
 
