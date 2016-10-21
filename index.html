@@ -337,7 +337,7 @@
         </section>
 
         <section>
-          <h2>V3.0 Client App Architecture</h2>
+          <h2>V3.0 Client App Stack</h2>
         </section>
 
         <section>
@@ -408,6 +408,45 @@ function timetable(state, action) {
       return state;
   }
 }
+          </code></pre>
+        </section>
+
+        <section>
+          <h3>Types - Flow</h3>
+          <ul>
+            <li>Catches common bugs in JavaScript code before they even run</li>
+              <pre><code data-trim>
+// @flow
+function foo(x) {
+  return x * 10;
+}
+foo('Hello, world!');
+              </code></pre>
+            </li>
+            <li>Add gradually</li>
+          </ul>
+        </section>
+
+        <section>
+          <ul>
+            <li>Form of documentation</li>
+          </ul>
+          <pre><code data-trim>
+type Module = {
+  AcadYear: AcadYear,
+  Corequisite?: string,
+  CorsBiddingStats: Array&lt;BiddingStat&gt;,
+  Department: Department,
+  History: Array&lt;SemesterData&gt;,
+  ModuleCode: ModuleCode,
+  ModuleCredit: string,
+  ModuleDescription: string,
+  ModuleTitle: ModuleTitle,
+  Preclusion?: string,
+  Prerequisite?: string,
+  Types: Array&lt;string&gt;,
+  Workload?: string,
+};
           </code></pre>
         </section>
 
