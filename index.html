@@ -433,19 +433,31 @@ foo('Hello, world!');
           </ul>
           <pre><code data-trim>
 type Module = {
-  AcadYear: AcadYear,
+  AcadYear: string,
   Corequisite?: string,
   CorsBiddingStats: Array&lt;BiddingStat&gt;,
-  Department: Department,
+  Department: string,
   History: Array&lt;SemesterData&gt;,
-  ModuleCode: ModuleCode,
+  ModuleCode: string,
   ModuleCredit: string,
   ModuleDescription: string,
-  ModuleTitle: ModuleTitle,
+  ModuleTitle: string,
   Preclusion?: string,
   Prerequisite?: string,
   Types: Array&lt;string&gt;,
-  Workload?: string,
+  Workload?: string
+};
+          </code></pre>
+          <pre><code data-trim>
+type Lesson = {
+  ClassNo: string,
+  DayText: string,
+  EndTime: string,
+  LessonType: string,
+  ModuleCode: string,
+  StartTime: string,
+  Venue: string,
+  WeekText: string
 };
           </code></pre>
         </section>
