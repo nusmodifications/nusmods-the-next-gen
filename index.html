@@ -337,6 +337,79 @@
         </section>
 
         <section>
+          <h2>V3.0 Client App Architecture</h2>
+        </section>
+
+        <section>
+          <h3>View - React</h3>
+          <ul>
+            <li>Declarative
+              <ul>
+                <li>Say what you want, instead of how you want</li>
+                <li>By looking at the template code, you know how the final markup will look like</li>
+                <li>Fewer hops in logic required</li>
+              </ul>
+            </li>
+            <li>Predictable
+              <ul>
+                <li>UI is a function of state: <code>render(data) -> view</code></li>
+                <li>Given this set of data, A, the rendered output will definitely look like B</li>
+              </ul>
+            </li>
+            <li>Good for interactive apps where changes to app state can be made from many places.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Logic - Redux</h3>
+          <ul>
+            <li>Flux architecture</li>
+            <li>Single, Global State Tree
+              <ul>
+                <li>Single source of truth. Data stays in sync for different parts of the application.</li>
+                <li>Undo/redo made easy</li>
+              </ul>
+            </li>
+            <li>Changes are made with pure functions
+              <ul>
+                <li>Reducers are pure functions that take the previous state and an action, and computes the next state.</li>
+                <li><code>reducer(state, action) -> nextState</code></li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>ADD_MODULE action</h3>
+          <pre><code data-trim>
+function addModule(moduleCode, lessons) {
+  return {
+    type: 'ADD_MODULE',
+    payload: {
+      moduleCode: moduleCode,
+      lessons: lessons
+    }
+  };
+}
+          </code></pre>
+        </section>
+
+        <section>
+          <h3>timetable reducer</h3>
+          <pre><code data-trim>
+function timetable(state, action) {
+  switch (action.type) {
+    case 'ADD_MODULE':
+      var newState = Object.assign({}, state);
+      newState.modules.push(action.payload.moduleCode);
+      newState.lessons.push(action.payload.lessons);
+      return newState;
+  }
+}
+          </code></pre>
+        </section>
+
+        <section>
           <section>
             <h2>Design Considerations</h2>
           </section>
