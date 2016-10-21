@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>NUSMods v3.0</title>
+		<title>NUSMods v3.0 - The Next Gen</title>
 
 		<meta name="description" content="Slides for a NUSHackers talk about NUSMods">
 		<meta name="author" content="Li Kai">
@@ -43,7 +43,7 @@
 					<h1>NUSMods 3.0</h1>
 					<h3>Living on the cutting edge</h3>
 					<p>
-						By <a href="http://yangshun.im" target="_blank">Yang Shun</a> / <a href="https://github.com/yangshun" target="_blank">yangshun</a> and <a href="http://www.github.com/li-kai">Li Kai</a>
+						By <a href="http://www.github.com/li-kai">Li Kai</a> and <a href="https://github.com/yangshun" target="_blank">Yang Shun</a>
 					</p>
 				</section>
 
@@ -56,7 +56,7 @@
         <section>
           <!-- Or do I introduce you? -->
           <h2>And I'm Yang Shun</h2>
-          <p>I work at Grab, tutor people, built <a href="https://www.nusmods.com/">NUSMods</a> and more.</p>
+          <p>I work at <a href="https://grab.careers/">Grab</a>, built <a href="https://nusmods.com/">NUSMods</a> and founded <a href="https://www.nuswhispers.com/">NUSWhispers</a>.</p>
         </section>
 
 				<section>
@@ -423,15 +423,13 @@ foo('Hello, world!');
 
         <section>
           <ul>
-            <li>Form of documentation</li>
+            <li>Implicit form of documentation</li>
           </ul>
           <pre><code data-trim>
 type Module = {
   AcadYear: string,
-  Corequisite?: string,
   CorsBiddingStats: Array&lt;BiddingStat&gt;,
   Department: string,
-  History: Array&lt;SemesterData&gt;,
   ModuleCode: string,
   ModuleCredit: string,
   ModuleDescription: string,
@@ -581,6 +579,63 @@ type Lesson = {
         <section>
           <h1>V3.0 Demo</h1>
           <p><a href="http://v3.nusmods.com">http://v3.nusmods.com</a></p>
+        </section>
+
+        <section>
+          <h2>Timetabling Algorithm</h2>
+          <p>Series of data transformations</p>
+          <pre><code data-trim>
+type Lesson = {
+  ClassNo: string,
+  DayText: string,
+  EndTime: string,
+  LessonType: string,
+  ModuleCode: string,
+  StartTime: string,
+  Venue: string,
+  WeekText: string
+};
+          </code></pre>
+          <p>Starts with an array of <code>Lesson</code>s</p>
+        </section>
+
+        <section>
+          <h3>Group Lessons by Days</h3>
+          <pre><code data-trim>
+// from
+[LessonA, LessonB, LessonC, LessonD, ...];
+
+// into
+{
+    Monday: [LessonA, LessonB, LessonC],
+    Tuesday: [LessonD, ...]
+};
+          </code></pre>
+        </section>
+
+        <section>
+          <h3>Arrange Lesson within each Day</h3>
+          <pre><code data-trim>
+// from
+{
+    Monday: [LessonA, LessonB, LessonC],
+    Tuesday: [LessonD, ...]
+};
+
+// into
+{
+    Monday: [
+        [LessonA, LessonB],
+        [LessonC],
+    ],
+    Tuesday: [
+        [LessonD, ...]
+    ],
+    ...
+};
+          </code></pre>
+          <p>Generic useful timetable representation</p>
+          <p>Detailed explanation found <a href="https://gist.github.com/yangshun/ee7f1a4fee5b221a93ffb8a1b9f3de47">here</a></p>
         </section>
 
         <section>
