@@ -468,6 +468,7 @@ type Lesson = {
         <section>
           <h3>Mobile First</h3>
           <p>Develop for the phone first, using Chrome/Firefox's mobile debugger</p>
+          <p>Use media queries intensively</p>
           <p>Alternative to edit lessons: Tapping vs Drag n Drop</p>
         </section>
         <section>
@@ -505,6 +506,24 @@ type Lesson = {
           </div>
         </section>
         <section>
+          <h3>Offline first</h3>
+          <img src="./img/liefi.png">
+          <p>Better experience for people</p>
+          <p>Especially important for mobile devices</p>
+        </section>
+        <section>
+          <h2>How?</h2>
+          <div class="fragment">
+            <h5>Service Workers</h5>
+            <p>No access to DOM but can intercept requests</p>
+            <p>Does much much more, but...</p>
+          </div>
+        </section>
+        <section>
+          <h4>Poorly supported in Safari</h4>
+          <iframe class="stretch" style="background: white" src="https://jakearchibald.github.io/isserviceworkerready/"></iframe>
+        </section>
+        <section>
           <h3>Flexible start/end timings</h3>
           <p class="fragment">We realised lessons that start at 6am exists</p>
           <p class="fragment">So did lessons that ended at midnight</p>
@@ -526,6 +545,15 @@ type Lesson = {
         <section>
           <img src="./img/nus-bus.jpg">
           <p>Perhaps this is why the buses are so packed?</p>
+        </section>
+        <section>
+          <h3>Horizontal / Vertical Mode</h3>
+          <div style="text-align: left;">
+            <p>Problem arised when: </p>
+            <p style="color: tomato;" class="fragment">NTU people complained about horizontal mode.</p>
+            <p style="color: dodgerblue;" class="fragment">NUS people complained about vertical mode.</p>
+          </div>
+          <p class="fragment" style="float: right;">Solution: Toggle-able orientations</p>
         </section>
 
         <section>
@@ -554,16 +582,6 @@ type Lesson = {
         </section>
         <section>
           <p>You see where this is going</p>
-        </section>
-
-        <section>
-          <h3>Horizontal / Vertical Mode</h3>
-          <div style="text-align: left;">
-            <p>Problem arised when: </p>
-            <p style="color: tomato;" class="fragment">NTU people complained about horizontal mode.</p>
-            <p style="color: dodgerblue;" class="fragment">NUS people complained about vertical mode.</p>
-          </div>
-          <p class="fragment" style="float: right;">Solution: Toggle-able orientations</p>
         </section>
 
         <section>
