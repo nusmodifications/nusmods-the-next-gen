@@ -125,27 +125,201 @@
           </section>
 				</section>
 
-        <section>
-          <section><h1>History of NUSMods</h1><small>A very brief one</small></section>
-          <!-- insert more stuff -->
+                <section>
+          <section>
+            <h3>Just for Fun: Parsing NTU</h3>
+            <p>Crawling with Scrapy
+              <small style="transform: rotate(15deg) translateY(1em); font-size: 0.5em;">
+                I thought this was a Javascript talk?
+              </small>
+            </p>
+          </section>
+          <section>
+            <p>
+              NTU load their data in an iframe.
+            </p>
+            <img class="stretch" src="./img/ntu_info.png">
+          </section>
+          <section>
+            <h4>Steps:</h4>
+            <ol>
+              <li>Get the iframe url</li>
+              <li class="fragment">
+                <div>Url has a subject code search parameter </div>
+                <div style="color: yellow">"...&r_subj_code=<span style="color: aqua">CS</span>&boption=Search"</div>
+              </li>
+              <li class="fragment">
+                <div>How do we get all modules?</div>
+                <div class="fragment">Pass in nothing! <div style="color: lime">"...&r_subj_code=&boption=Search"</div></div>
+              </li>
+            </ol>
+          </section>
+          <section>
+            <h3>Modern HTML layout</h3>
+            <pre><code data-trim>
+<li class="nav-dropdown-container">
+  <a class="nav-link">Community</a>
+  <span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li>
+      <a href="https://github.com/vuejs/vue" class="nav-link" target="_blank">GitHub</a>
+    </li>
+  </ul>
+</li>
+            </code></pre>
+            <p>Easy to parse via selectors</p>
+          </section>
+          <section>
+            <h3>Layout using tables</h3>
+            <pre><code data-trim>
+<TABLE>
+<TR>
+  <TD WIDTH="100"><B><FONT SIZE=2 COLOR=#0000FF>AC2103</FONT></B></TD>
+  <TD WIDTH="400"><B><FONT SIZE=2 COLOR=#0000FF>RISK MANAGEMENT, CONTROL AND ETHICS</FONT></B></TD>
+  <TD WIDTH="100"><B><FONT SIZE=2 COLOR=#0000FF>  4.0</FONT></B></TD>
+  <TD WIDTH="100"><B><FONT SIZE=2 COLOR=#0000FF>ACC</FONT></B></TD>
+</TR>
+<TR>
+  <TD><B><FONT SIZE=2 COLOR=#FF00FF>Prerequisite:</FONT></B></TD>
+  <TD COLSPAN="2"><B><FONT  SIZE=2 COLOR=#FF00FF>AC2101(Corequisite) & AC2401(Corequisite) & AC3101</FONT></B></TD>
+</TR>
+<TR>
+  <TD><B><FONT SIZE=2 COLOR=BROWN>Mutually exclusive with: </FONT></B></TD>
+  <TD COLSPAN="2"><B><FONT SIZE=2 COLOR=BROWN>AA205, AC3104</FONT></B></TD>
+</TR>
+</TABLE>
+            </code></pre>
+            <p>No well defined layers</p>
+          </section>
+          <section>
+            <h3>Solution?</h3>
+              <p class="fragment">Select using <span style="color:orange">color</span> tags</p>
+              <p class="fragment">Select using <span>&</span>nbsp that was in between each module somehow</p>
+          </section>
         </section>
 
         <section>
-          <section>
-            <h2>NUSMods v3.0 collaboration</h2>
-            <p>All hail Facebook</p>
-          </section>
-          <section>
-            <h3>New Stack</h3>
-            <ul>
-              <li>Yarn <small>By facebook</small></li>
-              <li>Webpack</li>
-              <li>React <small>By facebook</small></li>
-              <li>Redux <small>By facebook</small></li>
-              <li>Flow <small>By facebook</small></li>
-              <li>AVA</li>
-            </ul>
-          </section>
+          <h1>A brief introduction to NUSMods</h1>
+        </section>
+
+        <section>
+          <h2>What does NUSMods stand for?</h2>
+          <ul>
+            <li class="fragment">NUS Modules?</li>
+            <li class="fragment">NUS Moderators?</li>
+            <li class="fragment">NUS Modifications?</li>
+          </ul>
+          <p  class="fragment">Naming is one of the hardest things in Computer Science.</p>
+        </section>
+
+        <section>
+          <img src="img/cs-hardest-things.png"/>
+          <a href="https://twitter.com/codinghorror/status/506010907021828096">https://twitter.com/codinghorror/status/506010907021828096</a>
+        </section>
+
+        <section>
+          <h2>Goals and Objectives</h2>
+          <ul>
+            <li class="fragment">Enhance the quality of lives and school experience of NUS students</li>
+            <li class="fragment">Provide a platform to encourage students to experiment and create original community-engaging work via <a href="https://github.com/nusmodifications/nusmods-api">NUSMods API</a>.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Timeline</h2>
+          <ul>
+            <li class="fragment">2012 - Official timetable not usable. Unofficial version was Windows only. Beng built a jQuery version.</li>
+            <li class="fragment">2014 - Rebuilt by Beng and Yang Shun using Backbone and Marionette. Many features were added.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h1>Evolution of NUSMods</h1>
+        </section>
+
+        <section>
+          <h2>Version 0.1 - <a href="corset/">CORSet</a></h2>
+          <iframe class="stretch" src="corset/" style="background-color:white"></iframe>
+        </section>
+
+        <section>
+          <h2>Version 1.0 - <a href="NUSMods-Offline">NUSMods Beta</a></h2>
+          <iframe class="stretch" src="NUSMods-Offline/"></iframe>
+          <small>Refresh the page if it doesn't load</small>
+        </section>
+
+        <section>
+          <h2>NUSMods v3.0 collaboration</h2>
+        </section>
+
+        <section>
+          <h2>It started with a <a href="https://github.com/nusmodifications/nusmods/issues/294#issuecomment-240896761">Github issue</a></h2>
+          <img src="./img/github-issue.png"/>
+        </section>
+
+        <section>
+          <h3>Key Considerations</h3>
+          <ul>
+            <li class="fragment">Mobile first
+              <ul>
+                <li>Increased mobile penetration</li>
+              </ul>
+            </li>
+            <li class="fragment">Optimize for performance
+              <ul>
+                <li>Low end devices</li>
+                <li>Poor network connectivity</li>
+              </ul>
+            </li>
+            <li class="fragment">Maintainability
+              <ul>
+                <li>Well-tested</li>
+                <li>Standardized coding style</li>
+                <li>Documented code</li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Stack Evolution</h3>
+          <table>
+            <tr>
+              <th></th>
+              <th>Old</th>
+              <th>New</th>
+            </tr>
+            <tr>
+              <td>Bundler</td>
+              <td>Grunt + Browserify</td>
+              <td>Webpack</td>
+            </tr>
+            <tr>
+              <td>Language</td>
+              <td>ES5</td>
+              <td>ES6 (Babel <small>By Facebook</small>)</td>
+            </tr>
+            <tr>
+              <td>Package Manager</td>
+              <td>NPM</td>
+              <td>Yarn <small>By Facebook</small></td>
+            </tr>
+            <tr>
+              <td>JS Framework</td>
+              <td>Backbone + Marionette</td>
+              <td>React + Redux <small>By Facebook</small></td>
+            </tr>
+            <tr>
+              <td>Type</td>
+              <td>N/A</td>
+              <td>Flow <small>By Facebook</small></td>
+            </tr>
+            <tr>
+              <td>Tests</td>
+              <td>N/A</td>
+              <td>Jest <small>By Facebook</small></td>
+            </tr>
+          </table>
         </section>
 
         <section>
@@ -260,80 +434,6 @@
           <section><h2>React</h2></section>
           <section><h3>Why React</h3></section>
         </section>
-
-        <section>
-          <section>
-            <h3>Just for Fun: Parsing NTU</h3>
-            <p>Crawling with Scrapy
-              <small style="transform: rotate(15deg) translateY(1em); font-size: 0.5em;">
-                I thought this was a Javascript talk?
-              </small>
-            </p>
-          </section>
-          <section>
-            <p>
-              NTU load their data in an iframe.
-            </p>
-            <img class="stretch" src="./img/ntu_info.png">
-          </section>
-          <section>
-            <h4>Steps:</h4>
-            <ol>
-              <li>Get the iframe url</li>
-              <li class="fragment">
-                <div>Url has a subject code search parameter </div>
-                <div style="color: yellow">"...&r_subj_code=<span style="color: aqua">CS</span>&boption=Search"</div>
-              </li>
-              <li class="fragment">
-                <div>How do we get all modules?</div>
-                <div class="fragment">Pass in nothing! <div style="color: lime">"...&r_subj_code=&boption=Search"</div></div>
-              </li>
-            </ol>
-          </section>
-          <section>
-            <h3>Modern HTML layout</h3>
-            <pre><code data-trim>
-<li class="nav-dropdown-container">
-  <a class="nav-link">Community</a>
-  <span class="arrow"></span>
-  <ul class="nav-dropdown">
-    <li>
-      <a href="https://github.com/vuejs/vue" class="nav-link" target="_blank">GitHub</a>
-    </li>
-  </ul>
-</li>
-            </code></pre>
-            <p>Easy to parse via selectors</p>
-          </section>
-          <section>
-            <h3>Layout using tables</h3>
-            <pre><code data-trim>
-<TABLE>
-<TR>
-  <TD WIDTH="100"><B><FONT SIZE=2 COLOR=#0000FF>AC2103</FONT></B></TD>
-  <TD WIDTH="400"><B><FONT SIZE=2 COLOR=#0000FF>RISK MANAGEMENT, CONTROL AND ETHICS</FONT></B></TD>
-  <TD WIDTH="100"><B><FONT SIZE=2 COLOR=#0000FF>  4.0</FONT></B></TD>
-  <TD WIDTH="100"><B><FONT SIZE=2 COLOR=#0000FF>ACC</FONT></B></TD>
-</TR>
-<TR>
-  <TD><B><FONT SIZE=2 COLOR=#FF00FF>Prerequisite:</FONT></B></TD>
-  <TD COLSPAN="2"><B><FONT  SIZE=2 COLOR=#FF00FF>AC2101(Corequisite) & AC2401(Corequisite) & AC3101</FONT></B></TD>
-</TR>
-<TR>
-  <TD><B><FONT SIZE=2 COLOR=BROWN>Mutually exclusive with: </FONT></B></TD>
-  <TD COLSPAN="2"><B><FONT SIZE=2 COLOR=BROWN>AA205, AC3104</FONT></B></TD>
-</TR>
-</TABLE>
-            </code></pre>
-            <p>No well defined layers</p>
-          </section>
-          <section>
-            <h3>Solution?</h3>
-              <p class="fragment">Select using <span style="color:orange">color</span> tags</p>
-              <p class="fragment">Select using <span>&</span>nbsp that was in between each module somehow</p>
-          </section>
-        </section>
-
 
 				<section style="text-align: left;">
 					<h1>THE END</h1>
