@@ -220,7 +220,7 @@
         <section>
           <h2>Goals and Objectives</h2>
           <ul>
-            <li class="fragment">Enhance the quality of lives and school experience of NUS students</li>
+            <li class="fragment">Enhance the quality of lives and school experience of NUS students through technology</li>
             <li class="fragment">Provide a platform to encourage students to experiment and create original community-engaging work via <a href="https://github.com/nusmodifications/nusmods-api">NUSMods API</a>.</li>
           </ul>
         </section>
@@ -301,8 +301,8 @@
           <table>
             <tr>
               <th></th>
-              <th>Old</th>
-              <th>New</th>
+              <th>v2.0</th>
+              <th>v3.0</th>
             </tr>
             <tr>
               <td><small>Bundler</small></td>
@@ -346,7 +346,7 @@
           <ul>
             <li>Declarative
               <ul>
-                <li>Say what you want, instead of how you want</li>
+                <li>Describe what you want, instead of how you want</li>
                 <li>By looking at the template code, you know how the final markup will look like</li>
                 <li>Fewer hops in logic required</li>
               </ul>
@@ -357,7 +357,6 @@
                 <li>Given this set of data, A, the rendered output will definitely look like B</li>
               </ul>
             </li>
-            <li>Good for interactive apps where changes to app state can be made from many places.</li>
           </ul>
         </section>
 
@@ -377,6 +376,7 @@
                 <li><code>reducer(state, action) -> nextState</code></li>
               </ul>
             </li>
+            <li>Good for interactive apps where changes to app state can be made from many places.</li>
           </ul>
         </section>
 
@@ -410,6 +410,7 @@ function timetable(state, action) {
   }
 }
           </code></pre>
+          <p>Fire same action from different places.</p>
         </section>
 
         <section>
@@ -685,7 +686,7 @@ type Lesson = {
 
         <section>
           <h2>Advice for new blood</h2>
-          <p>JavaScript is fatigue is real and it's here to stay.</p>
+          <p>JavaScript fatigue is real and it's here to stay.</p>
           <p>Learn to embrace it.</p>
         </section>
 
