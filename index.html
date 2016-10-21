@@ -570,6 +570,62 @@ type Lesson = {
         </section>
 
         <section>
+          <h2>Timetabling Algorithm</h2>
+          <p>Series of data transformations</p>
+          <pre><code data-trim>
+type Lesson = {
+  ClassNo: string,
+  DayText: string,
+  EndTime: string,
+  LessonType: string,
+  ModuleCode: string,
+  StartTime: string,
+  Venue: string,
+  WeekText: string
+};
+          </code></pre>
+          <p>Starts with an array of <code>Lesson</code>s</p>
+        </section>
+
+        <section>
+          <h3>Group Lessons by Days</h3>
+          <pre><code data-trim>
+// from
+[LessonA, LessonB, LessonC, LessonD, ...];
+
+// into
+{
+    Monday: [LessonA, LessonB, LessonC],
+    Tuesday: [LessonD, ...]
+};
+          </code></pre>
+        </section>
+
+        <section>
+          <h3>Arrange Lesson within each Day</h3>
+          <pre><code data-trim>
+// from
+{
+    Monday: [LessonA, LessonB, LessonC],
+    Tuesday: [LessonD, ...]
+};
+
+// into
+{
+    Monday: [
+        [LessonA, LessonB],
+        [LessonC],
+    ],
+    Tuesday: [
+        [LessonD, ...]
+    ],
+    ...
+};
+          </code></pre>
+          <p>Generic useful timetable representation</p>
+        </section>
+
+        <section>
           <h2>NUSModerator.js Library</h2>
           <p><a href="https://github.com/nusmodifications/nusmoderator">https://github.com/nusmodifications/nusmoderator</a></p>
           <p><em>Utlity toolbelt for nus applications</em></p>
